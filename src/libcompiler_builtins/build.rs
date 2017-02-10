@@ -95,6 +95,9 @@ fn main() {
         cfg.flag("-fomit-frame-pointer");
         cfg.flag("-ffreestanding");
         cfg.define("VISIBILITY_HIDDEN", None);
+
+        cfg.define("__BYTE_ORDER__", None);
+        cfg.define("__ORDER_LITTLE_ENDIAN__", None);
     }
 
     let mut sources = Sources::new();
