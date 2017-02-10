@@ -99,6 +99,8 @@ fn main() {
         cfg.define("__BYTE_ORDER__", Some("2"));
         cfg.define("__ORDER_BIG_ENDIAN__", Some("1"));
         cfg.define("__ORDER_LITTLE_ENDIAN__", Some("2"));
+
+        cfg.define("-mcpu=arm922t");
     }
 
     let mut sources = Sources::new();
