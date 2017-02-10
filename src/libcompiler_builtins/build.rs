@@ -96,8 +96,9 @@ fn main() {
         cfg.flag("-ffreestanding");
         cfg.define("VISIBILITY_HIDDEN", None);
 
-        cfg.define("__BYTE_ORDER__", None);
-        cfg.define("__ORDER_LITTLE_ENDIAN__", None);
+        cfg.define("__BYTE_ORDER__", Some("2"));
+        cfg.define("__ORDER_BIG_ENDIAN__", Some("1"));
+        cfg.define("__ORDER_LITTLE_ENDIAN__", Some("2"));
     }
 
     let mut sources = Sources::new();
